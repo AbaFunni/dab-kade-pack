@@ -139,6 +139,38 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
+			case 'dab':
+				tex = Paths.getSparrowAtlas('characters/Dab-Old', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Dab idle dance', 24);
+				animation.addByPrefix('singUP', 'Dab Sing Note UP', 24);
+				animation.addByPrefix('singRIGHT', 'Dab Sing Note RIGHT', 24);
+				animation.addByPrefix('singDOWN', 'Dab Sing Note DOWN', 24);
+				animation.addByPrefix('singLEFT', 'Dab Sing Note LEFT', 24);
+
+				addOffset('idle');
+				addOffset("singUP", -6, 50);
+				addOffset("singRIGHT", 0, 27);
+				addOffset("singLEFT", -10, 10);
+				addOffset("singDOWN", 0, -30);
+
+				playAnim('idle');
+			case 'sonic':
+				tex = Paths.getSparrowAtlas('characters/sonic', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'SONICmoveIDLE', 24);
+				animation.addByPrefix('singUP', 'SONICmoveUP', 24);
+				animation.addByPrefix('singRIGHT', 'SONICmoveRIGHT', 24);
+				animation.addByPrefix('singDOWN', 'SONICmoveDOWN', 24);
+				animation.addByPrefix('singLEFT', 'SONICmoveLEFT', 24);
+
+				addOffset('idle');
+				addOffset("singUP", -6, 50);
+				addOffset("singRIGHT", 0, 27);
+				addOffset("singLEFT", -10, 10);
+				addOffset("singDOWN", 0, -30);
+
+				playAnim('idle');
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
@@ -348,6 +380,37 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
 				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+
+				addOffset('idle', -5);
+				addOffset("singUP", -29, 27);
+				addOffset("singRIGHT", -38, -7);
+				addOffset("singLEFT", 12, -6);
+				addOffset("singDOWN", -10, -50);
+				addOffset("singUPmiss", -29, 27);
+				addOffset("singRIGHTmiss", -30, 21);
+				addOffset("singLEFTmiss", 12, 24);
+				addOffset("singDOWNmiss", -11, -19);
+				addOffset('firstDeath', 37, 11);
+				addOffset('deathLoop', 37, 5);
+				addOffset('deathConfirm', 37, 69);
+				playAnim('idle');
+
+				flipX = true;
+			case 'jelly':
+				var tex = Paths.getSparrowAtlas('characters/jelly');
+				frames = tex;
+				animation.addByPrefix('idle', 'Idle', 24, false);
+				animation.addByPrefix('singUP', 'Up', 24, false);
+				animation.addByPrefix('singLEFT', 'Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Down', 24, false);
+				animation.addByPrefix('singUPmiss', 'UMiss', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'LMiss', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'RMiss', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'DMiss', 24, false);
+				animation.addByPrefix('firstDeath', "firstDeath", 24, false);
+				animation.addByPrefix('deathLoop', "deatLoop", 24, true);
+				animation.addByPrefix('deathConfirm', "deathConfirm", 24, false);
 
 				addOffset('idle', -5);
 				addOffset("singUP", -29, 27);
