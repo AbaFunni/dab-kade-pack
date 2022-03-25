@@ -1,6 +1,7 @@
 {
 	"song": {
-		"player1": "bf-secks",
+		"song": "Parasite",
+		"player1": "bf",
 		"notes": [
 			{
 				"endTime": 1500,
@@ -4352,14 +4353,15 @@
 			}
 		],
 		"player2": "dab",
-		"player3": "gf",
-		"song": "Parasite",
+		"offset": 0,
 		"validScore": true,
 		"speed": 2.8,
 		"sectionLengths": [],
+		"gfVersion": "gf",
 		"stage": "stage",
-		"needsVoices": false,
+		"needsVoices": true,
 		"sections": 0,
 		"bpm": 160,
+		"noteStyle": "normal"
 	}
 }
