@@ -139,7 +139,7 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
-			case 'dab':
+			case 'dab-old':
 				tex = Paths.getSparrowAtlas('characters/Dab-Old', 'shared');
 				frames = tex;
 				animation.addByPrefix('idle', 'Dab idle dance', 24);
@@ -148,11 +148,11 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'Dab Sing Note DOWN', 24);
 				animation.addByPrefix('singLEFT', 'Dab Sing Note LEFT', 24);
 
-				addOffset('idle');
-				addOffset("singUP", -6, 50);
-				addOffset("singRIGHT", 0, 27);
-				addOffset("singLEFT", -10, 10);
-				addOffset("singDOWN", 0, -30);
+				addOffset('idle', 3, -92);
+				addOffset("singUP", 173, -144);
+				addOffset("singRIGHT", -60, -111);
+				addOffset("singLEFT", 90, -122);
+				addOffset("singDOWN", 60, -363);
 
 				playAnim('idle');
 			case 'sonic':
@@ -165,10 +165,42 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'SONICmoveLEFT', 24);
 
 				addOffset('idle');
-				addOffset("singUP", -6, 50);
-				addOffset("singRIGHT", 0, 27);
-				addOffset("singLEFT", -10, 10);
-				addOffset("singDOWN", 0, -30);
+				addOffset("singUP", 0, 76);
+				addOffset("singRIGHT", -10, 56);
+				addOffset("singLEFT", 79, -11);
+				addOffset("singDOWN", 48, 20);
+
+				playAnim('idle');
+			case 'nafri':
+				tex = Paths.getSparrowAtlas('characters/Nafri', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Idle', 24);
+				animation.addByPrefix('singUP', 'Up', 24);
+				animation.addByPrefix('singRIGHT', 'Right', 24);
+				animation.addByPrefix('singDOWN', 'Down', 24);
+				animation.addByPrefix('singLEFT', 'Left', 24);
+
+				addOffset('idle', 0, -9);
+				addOffset("singUP", -6, 33);
+				addOffset("singRIGHT", -28, -13);
+				addOffset("singLEFT", 20, -22);
+				addOffset("singDOWN", -20, -60);
+
+				playAnim('idle');
+			case 'dab':
+				tex = Paths.getSparrowAtlas('characters/Dab', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Dab idle dance', 24);
+				animation.addByPrefix('singUP', 'Dab Sing Note UP', 24);
+				animation.addByPrefix('singRIGHT', 'Dab Sing Note RIGHT', 24);
+				animation.addByPrefix('singDOWN', 'Dab Sing Note DOWN', 24);
+				animation.addByPrefix('singLEFT', 'Dab Sing Note LEFT', 24);
+
+				addOffset('idle');
+				addOffset("singUP", 26, 59);
+				addOffset("singRIGHT", -83, -10);
+				addOffset("singLEFT", 64, -4);
+				addOffset("singDOWN", 4, 0);
 
 				playAnim('idle');
 			case 'spooky':
@@ -396,34 +428,6 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
-			case 'bf-secks':
-				var tex = Paths.getSparrowAtlas('characters/bfCar');
-				frames = tex;
-				animation.addByPrefix('idle', 'BF idle dance', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
-				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
-				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
-
-				addOffset('idle', -5);
-				addOffset("singUP", -29, 27);
-				addOffset("singRIGHT", -38, -7);
-				addOffset("singLEFT", 12, -6);
-				addOffset("singDOWN", -10, -50);
-				addOffset("singUPmiss", -29, 27);
-				addOffset("singRIGHTmiss", -30, 21);
-				addOffset("singLEFTmiss", 12, 24);
-				addOffset("singDOWNmiss", -11, -19);
-				addOffset('firstDeath', 37, 11);
-				addOffset('deathLoop', 37, 5);
-				addOffset('deathConfirm', 37, 69);
-				playAnim('idle');
-
-				flipX = true;
 			case 'jelly':
 				var tex = Paths.getSparrowAtlas('characters/jelly');
 				frames = tex;
@@ -440,15 +444,18 @@ class Character extends FlxSprite
 				animation.addByPrefix('deathLoop', "deatLoop", 24, true);
 				animation.addByPrefix('deathConfirm', "deathConfirm", 24, false);
 
-				addOffset('idle', -5);
-				addOffset("singUP", -29, 27);
-				addOffset("singRIGHT", -38, -7);
-				addOffset("singLEFT", 12, -6);
-				addOffset("singDOWN", -10, -50);
-				addOffset("singUPmiss", -29, 27);
-				addOffset("singRIGHTmiss", -30, 21);
-				addOffset("singLEFTmiss", 12, 24);
-				addOffset("singDOWNmiss", -11, -19);
+				addOffset('idle', -59, -60);
+				addOffset("singUP", -110, -21);
+				addOffset("singRIGHT", -113, -57);
+				addOffset("singLEFT", -57, -60);
+				addOffset("singDOWN", -102, -82);
+				addOffset("singUPmiss", -115, -16);
+				addOffset("singRIGHTmiss", -106, -61);
+				addOffset("singLEFTmiss", -39, -57);
+				addOffset("singDOWNmiss", -85, -78);
+				addOffset('firstDeath', 0, 0);
+				addOffset('deathLoop', 0, 0);
+				addOffset('deathConfirm', 0, 0);
 				playAnim('idle');
 
 				flipX = true;
